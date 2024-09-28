@@ -86,6 +86,30 @@ CREATE TABLE Candidate_Bank_Details (
     creator_user VARCHAR(100)
 );
 
+CREATE TABLE Candidate_Qualification (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    candidate_id INT,
+    diploma VARCHAR(255),
+    degree_name VARCHAR(255),
+    is_degree_name_verified BOOLEAN,
+    employee_discipline VARCHAR(255),
+    is_employee_discipline_verified BOOLEAN,
+    passing_year INT,
+    is_passing_year_verified BOOLEAN,
+    aggr_per DECIMAL(5,2),
+    is_aggr_per_verified BOOLEAN,
+    final_year_per DECIMAL(5,2),
+    is_final_year_per_verified BOOLEAN,
+    training_institute VARCHAR(255),
+    is_training_institute_verified BOOLEAN,
+    training_duration_month INT,
+    is_training_duration_month_verified BOOLEAN,
+    other_training VARCHAR(255),
+    is_other_training_verified BOOLEAN,
+    creator_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    creator_user VARCHAR(100)
+);
+
 
 
 
