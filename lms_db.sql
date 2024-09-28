@@ -110,6 +110,15 @@ CREATE TABLE Candidate_Qualification (
     creator_user VARCHAR(100)
 );
 
+CREATE TABLE Candidate_Documents (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    candidate_id INT,
+    doc_type VARCHAR(255),
+    doc_path VARCHAR(255),
+    status ENUM('Pending', 'Received'),
+    creator_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    creator_user VARCHAR(100)
+);
 
 
 
