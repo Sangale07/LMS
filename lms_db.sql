@@ -70,5 +70,22 @@ CREATE TABLE Fellowship_Candidate (
     remark TEXT
 );
 
+CREATE TABLE Candidate_Bank_Details (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    candidate_id INT,
+    name VARCHAR(255),
+    account_number VARCHAR(20),
+    is_account_num_verified BOOLEAN,
+    ifsc_code VARCHAR(11),
+    is_ifsc_code_verified BOOLEAN,
+    pan_number VARCHAR(10),
+    is_pan_number_verified BOOLEAN,
+    aadhaar_num VARCHAR(12),
+    is_aadhaar_num_verified BOOLEAN,
+    creator_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    creator_user VARCHAR(100)
+);
+
+
 
 
