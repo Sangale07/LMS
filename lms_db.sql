@@ -33,4 +33,42 @@ CREATE TABLE Hired_Candidate (
     FOREIGN KEY (creator_user) REFERENCES User_Details(Id)
 );
 
+CREATE TABLE Fellowship_Candidate (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cic_id VARCHAR(255), 
+    first_name VARCHAR(100),
+    middle_name VARCHAR(100),
+    last_name VARCHAR(100),
+    email_id VARCHAR(255),
+    hired_city VARCHAR(100),
+    degree VARCHAR(100),
+    hired_date DATE,
+    mobile_number VARCHAR(15),
+    permanent_pincode VARCHAR(10),
+    hired_lab VARCHAR(100),
+    attitude TEXT,
+    communication_remark TEXT,
+    knowledge_remark TEXT,
+    aggregate_remark TEXT,
+    creator_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    creator_user VARCHAR(100),
+    birth_date DATE,
+    is_birth_date_verified BOOLEAN,
+    parent_name VARCHAR(255),
+    parent_occupation VARCHAR(255),
+    parents_mobile_number VARCHAR(15),
+    parents_annual_salary DECIMAL(15, 2),
+    local_address TEXT,
+    permanent_address TEXT,
+    photo_path VARCHAR(255),
+    joining_date DATE,
+    candidate_status VARCHAR(50),
+    personal_information TEXT,
+    bank_information TEXT,
+    educational_information TEXT,
+    document_status VARCHAR(50),
+    remark TEXT
+);
+
+
 
